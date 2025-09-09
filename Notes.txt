@@ -1,0 +1,16 @@
+Ver bases de datos:
+SELECT name, database_id, create_date, state_desc 
+FROM sys.databases;
+
+Ver tablas:
+SELECT name FROM sys.tables;
+
+Ver estructura de la tabla: 
+SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS 
+WHERE TABLE_NAME = 'table_name';
+
+---Comando docker
+
+-docker cp inserts_completos.sql tu_contenedor_mssql:/tmp/inserts_completos.sql
+
+-/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "tu_password" -i /tmp/inserts_completos.sql
