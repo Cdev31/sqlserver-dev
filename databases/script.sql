@@ -384,7 +384,7 @@ CREATE TABLE review_processes (
     completion_date DATE NULL,
     comments TEXT,
     decision VARCHAR(50) CHECK (decision IN ('accepted', 'rejected', 'minor_revision', 'major_revision', 'pending')),
-    score INT CHECK (score >= 1 AND score <= 5),
+    score INT CHECK (score >= 0 AND score <= 5),
     creation_date DATETIME DEFAULT GETDATE(),
     update_date DATETIME DEFAULT GETDATE(),
     FOREIGN KEY (publication_id) REFERENCES publications(publication_id) ON DELETE CASCADE,
