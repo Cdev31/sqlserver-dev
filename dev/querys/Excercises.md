@@ -1,271 +1,143 @@
-# Ejercicios SQL - Base de Datos ResearchManagementDB
+# Ejercicios SQL – researchManagementDB
 
-## Ejercicios de Consultas SQL NIVEL A
+## Nivel Básico (25)
 
-1. Listar todos los investigadores cuyo estado sea 'active' ordenados por nombre
-2. Mostrar los proyectos que tienen un presupuesto mayor a $1,000,000 ordenados por presupuesto descendente
-3. Encontrar todas las publicaciones del año 2024 ordenadas por fecha de publicación
-4. Listar los departamentos que pertenecen a instituciones en 'USA' ordenados por nombre de institución
-5. Mostrar las convocatorias que están en estado 'open' ordenadas por fecha de cierre
-6. Encontrar investigadores con índice h mayor a 30 ordenados por índice h descendente
-7. Listar patentes con estado 'granted' ordenadas por fecha de concesión
-8. Mostrar eventos académicos que sean de tipo 'conference' ordenados por fecha de inicio
-9. Encontrar financiamientos en moneda 'USD' ordenados por monto descendente
-10. Listar laboratorios con capacidad mayor a 20 personas ordenados por capacidad
+1. Obtén el nombre y país de todas las instituciones ordenadas alfabéticamente por país.
+2. Muestra el nombre y email de todos los departamentos cuyo nombre contenga la palabra `Science`.
+3. Lista los nombres de investigadores cuyo `h_index` esté entre 20 y 40.
+4. Devuelve el título de todas las publicaciones que tengan un `impact_factor` mayor a 10.
+5. Cuenta cuántos investigadores hay por institución.
+6. Obtén la lista de ciudades distintas donde haya instituciones registradas.
+7. Recupera las convocatorias que estén actualmente en estado `open` o `evaluation`.
+8. Muestra el nombre de los equipos de investigación y la fecha de reconocimiento, ordenados por fecha descendente.
+9. Encuentra todos los laboratorios que tengan capacidad mayor a 20.
+10. Lista los proyectos que tengan un presupuesto mayor a 1,000,000 USD.
+11. Muestra el nombre de las áreas de conocimiento de nivel 1.
+12. Devuelve el nombre y la fecha de fundación de las instituciones fundadas antes del año 1900.
+13. Recupera los investigadores cuya categoría académica sea `Professor` o `Associate Professor`.
+14. Lista todas las publicaciones que pertenezcan al cuartil Q1.
+15. Obtén los proyectos cuya fecha estimada de finalización esté entre 2025 y 2026.
+16. Devuelve los nombres de los investigadores cuyo correo termine en `.edu`.
+17. Muestra los laboratorios activos que estén en Harvard University.
+18. Lista los proyectos con estatus `execution`, ordenados por presupuesto descendente.
+19. Cuenta cuántos proyectos existen en cada institución.
+20. Encuentra el nombre de los equipos de investigación cuyo código empiece con `MIT`.
+21. Lista las convocatorias cuyo presupuesto sea superior al promedio general de convocatorias.
+22. Muestra los nombres de investigadores que no tengan publicaciones asociadas.
+23. Encuentra todos los eventos académicos que se realicen en 2024.
+24. Obtén los nombres de las áreas de conocimiento que no tengan área padre (`parent_area_id` nulo).
+25. Devuelve las publicaciones que tengan DOI registrado y ordénalas alfabéticamente por `journal_name`.
 
-11. Buscar investigadores cuyo nombre contenga 'Dr.' ordenados por fecha de incorporación
-12. Encontrar proyectos cuyo título contenga la palabra 'quantum' ordenados por fecha de inicio
-13. Listar instituciones cuyo nombre comience con 'University' ordenadas por país
-14. Mostrar publicaciones donde el journal_name contenga 'Nature' ordenadas por factor de impacto
-15. Buscar departamentos cuyo código termine con 'CS' ordenados por nombre de institución
-16. Encontrar investigadores con email institucional de 'harvard.edu' ordenados por nombre
-17. Listar áreas de conocimiento cuyo nombre contenga 'science' ordenadas por nivel
-18. Mostrar convocatorias de entidades que contengan 'National' ordenadas por presupuesto
+---
 
-19. Contar el número de investigadores por institución ordenado por cantidad descendente
-20. Calcular el presupuesto total de proyectos por tipo de proyecto ordenado por presupuesto
-21. Mostrar el promedio de índice h por categoría académica ordenado por promedio descendente
-22. Contar publicaciones por tipo mostrando solo tipos con más de 5 publicaciones ordenado por cantidad
-23. Calcular la suma total de financiamiento por institución ordenado por monto descendente
-24. Mostrar el número de proyectos por estado ordenado por cantidad descendente
-25. Contar patentes por país de registro ordenado por cantidad de patentes
-26. Calcular el número promedio de citas por publicación por año ordenado por año
-27. Mostrar instituciones que tienen más de 5 departamentos ordenadas por cantidad de departamentos
-28. Contar investigadores por departamento mostrando solo departamentos con más de 3 investigadores
+## Nivel Intermedio (25)
 
-29. Mostrar el nombre de investigadores en mayúsculas junto con su institución ordenado por nombre
-30. Calcular la antigüedad en años de cada investigador ordenado por antigüedad descendente
-31. Listar proyectos mostrando la duración estimada en meses ordenado por duración
-32. Mostrar publicaciones con el año de publicación ordenadas por año y factor de impacto
-33. Calcular el presupuesto promedio de proyectos por institución ordenado por promedio
-34. Mostrar investigadores con su nombre formateado como "Apellido, Nombre" ordenado por apellido
-35. Listar publicaciones mostrando solo los primeros 50 caracteres del abstract ordenadas por título
+1. Encuentra los proyectos cuyo presupuesto sea mayor al de todos los proyectos de Stanford University.
+2. Lista las instituciones que no tengan departamentos asociados.
+3. Devuelve el nombre de los investigadores que pertenezcan a más de un departamento.
+4. Encuentra las publicaciones cuyo número de citas sea mayor que el promedio de todas las publicaciones.
+5. Lista los nombres de los investigadores que hayan participado en proyectos con estatus `execution`.
+6. Devuelve las convocatorias que cierren dentro de los próximos 60 días.
+7. Muestra los nombres de los equipos de investigación y el total de investigadores en cada equipo.
+8. Obtén las publicaciones junto con el nombre de la conferencia o evento académico donde se presentaron.
+9. Lista los proyectos que pertenezcan tanto al área de `Artificial Intelligence` como al área de `Medicine`.
+10. Devuelve el nombre y correo de los investigadores que lideran proyectos (rol = `principal`).
+11. Recupera las patentes que no tengan aún fecha de concesión (`grant_date` nula).
+12. Lista los títulos de publicaciones que hayan sido citadas por al menos 3 otras publicaciones.
+13. Muestra los laboratorios junto con el nombre de su responsable.
+14. Encuentra todos los proyectos cuya fecha estimada de finalización sea mayor que cualquier fecha de finalización real registrada.
+15. Devuelve los investigadores que hayan participado en publicaciones con `impact_factor` mayor a 20.
+16. Muestra los proyectos que tengan más de un área de conocimiento asociada.
+17. Lista los nombres de revisores y las áreas de conocimiento en las que tienen nivel de expertise `high`.
+18. Devuelve los proyectos que no tienen financiamiento asociado.
+19. Encuentra todas las publicaciones cuyo `title` contenga la palabra `Quantum` (insensible a mayúsculas).
+20. Lista los proyectos con presupuesto superior a 2 millones y ordena solo los primeros 5 más altos.
+21. Devuelve las citas de publicaciones que refieran a artículos publicados después de 2024-01-01.
+22. Muestra los proyectos cuyo presupuesto total sea mayor al presupuesto de todos los proyectos de Google Research.
+23. Encuentra los investigadores que hayan sido inventores en al menos una patente y también autores en al menos una publicación.
+24. Lista los eventos académicos junto con la cantidad de publicaciones asociadas a cada uno.
+25. Devuelve los investigadores cuyo `h_index` sea igual al mayor `h_index` registrado en la base.
 
-36. Encontrar investigadores que tienen más publicaciones que el promedio ordenados por cantidad
-37. Mostrar proyectos que empezaron antes que el proyecto con el mayor presupuesto ordenados por fecha
-38. Listar instituciones que tienen más investigadores que la institución promedio ordenadas por cantidad
-39. Encontrar publicaciones con más citas que el promedio de su tipo ordenadas por citas
-40. Mostrar investigadores cuyo índice h es mayor que el promedio de su institución ordenados por índice h
+---
 
-41. Listar proyectos que no tienen publicaciones asociadas ordenados por título
-42. Encontrar departamentos que no tienen investigadores asignados ordenados por nombre
-43. Mostrar convocatorias que no han financiado ningún proyecto ordenadas por nombre
-44. Listar investigadores que no son autores de ninguna publicación ordenados por nombre
-45. Encontrar áreas de conocimiento que no tienen proyectos asociados ordenadas por nombre
+## Nivel Avanzado (25)
 
-46. Mostrar proyectos que están en ejecución y tienen presupuesto menor al promedio ordenados por presupuesto
-47. Listar investigadores activos con más de 10 años de antigüedad ordenados por antigüedad
-48. Encontrar publicaciones con factor de impacto mayor a 10 y cuartil Q1 ordenadas por factor
-49. Mostrar patentes solicitadas en los últimos 2 años ordenadas por fecha de solicitud
-50. Listar eventos académicos que ocurrirán en los próximos 6 meses ordenados por fecha
+1. Usa una CTE (`WITH`) para listar el total de publicaciones por área de conocimiento y filtra las que tengan más de 10 publicaciones.
+2. Encuentra las instituciones que tienen proyectos en áreas de conocimiento distintas a las de sus departamentos.
+3. Muestra los investigadores que tengan más citas que cualquier investigador de Harvard University.
+4. Genera una consulta que devuelva en formato JSON todas las publicaciones junto con sus autores.
+5. Obtén el nombre de los proyectos cuyo presupuesto en USD convertido a EUR (tasa 0.9) sea mayor a 2 millones.
+6. Lista los investigadores y calcula la edad de incorporación en años usando funciones de fecha.
+7. Devuelve las publicaciones agrupadas por cuartil y calcula el promedio de citas en cada grupo.
+8. Obtén el nombre de los proyectos que hayan recibido desembolsos mayores al 50% de su financiamiento total.
+9. Usa `EXCEPT` para encontrar los investigadores que son revisores pero no son inventores de patentes.
+10. Devuelve los proyectos que tienen al menos un colaborador con `weekly_hours` mayor a 20.
+11. Usa `UNION` para combinar en un solo listado el nombre de instituciones y el nombre de equipos de investigación.
+12. Obtén los proyectos cuya duración (end_date - start_date) sea mayor a la duración promedio de todos los proyectos.
+13. Devuelve los títulos de publicaciones junto con el nombre de su patente relacionada, si existe (join avanzado).
+14. Muestra los investigadores que no tienen ningún indicador de impacto asociado (`NOT EXISTS`).
+15. Encuentra los proyectos que tengan investigadores con `status = inactive`.
+16. Genera un ranking de investigadores por número total de publicaciones usando `ROW_NUMBER()`.
+17. Devuelve los eventos académicos que tengan publicaciones con `impact_factor` superior al de todas las publicaciones de `Cancer Cell`.
+18. Usa funciones de string para devolver el dominio del correo electrónico de cada investigador.
+19. Encuentra las áreas de conocimiento que no estén asociadas a ningún proyecto ni publicación.
+20. Genera una consulta que devuelva las convocatorias en formato JSON incluyendo nombre, entidad convocante y presupuesto.
+21. Devuelve los proyectos cuyo presupuesto es mayor que la suma de los presupuestos de todos los proyectos de Oxford.
+22. Encuentra los investigadores que hayan participado en proyectos en más de un país distinto.
+23. Usa `HAVING` para listar las instituciones que tengan más de 3 equipos de investigación activos.
+24. Obtén los nombres de los investigadores cuyo `full_name` tenga más de 15 caracteres.
+25. Devuelve las publicaciones cuya fecha esté entre la apertura y cierre de su convocatoria de financiamiento.
 
-51. Contar el número de proyectos por área de conocimiento mostrando solo áreas con más de 2 proyectos
-52. Mostrar el presupuesto total por tipo de proyecto excluyendo tipos con menos de $500,000 total
-53. Encontrar investigadores con publicaciones en más de 3 áreas de conocimiento diferentes
-54. Listar instituciones que tienen proyectos en todas las áreas de conocimiento disponibles
-55. Mostrar investigadores que trabajan en múltiples departamentos ordenados por cantidad de departamentos
+# Ejercicios SQL – Nivel Avanzado · Análisis (50)
 
-56. Calcular el número total de citas por investigador ordenado por citas totales
-57. Encontrar proyectos que han generado más de 5 publicaciones ordenados por cantidad
-58. Mostrar el promedio de presupuesto por institución ordenado por promedio descendente
-59. Listar investigadores que han publicado en journals con factor de impacto mayor a 20
-60. Encontrar departamentos que tienen laboratorios con capacidad superior al promedio
+1. Calcular, por institución, el porcentaje del presupuesto total de proyectos que está actualmente en estatus `execution`, y rankear instituciones por ese porcentaje (incluye empate y percentil).
+2. Identificar proyectos cuyo monto total de desembolsos acumulados supere el 60% de su financiamiento asignado a la fecha, con la curva mensual de desembolso (serie temporal por proyecto).
+3. Detectar investigadores “hub” de coautoría: top 10 por número de coautores distintos en publicaciones, mostrando también el promedio de citas de las publicaciones donde colaboraron.
+4. Hallar equipos de investigación cuya productividad (publicaciones asociadas a sus proyectos por millón de presupuesto) esté en el cuartil superior, con métricas por año de inicio del proyecto.
+5. Listar convocatorias cuyo presupuesto sea inferior a la suma de los presupuestos de los proyectos que financiaron, incluyendo un indicador de sobrecompromiso (ratio > 1).
+6. Construir una tabla pivote de áreas de conocimiento (filas) vs. tipos de proyecto (columnas) con el conteo de proyectos y un total general, ordenada por el total.
+7. Determinar la “edad científica” de cada investigador (años desde la primera publicación) y el ritmo de publicación (publicaciones/año), comparándolo contra la mediana de su institución.
+8. Encontrar proyectos con retraso: fecha estimada de fin vencida y sin `actual_end_date`, mostrando días de retraso y desviación relativa respecto a la duración planificada.
+9. Para cada revista, calcular el impacto promedio ponderado por citas de las publicaciones allí indexadas y obtener el top 5 con al menos 3 artículos.
+10. Construir una matriz de coincidencia proyecto–área principal: para cada proyecto, indicar 1 si posee el área (AI, Medicine, Physics, etc.) como principal y 0 en caso contrario (one-hot).
+11. Detectar “colisiones” de asignación: investigadores con más de 40 horas semanales sumando todos los proyectos activos, con desglose por rol y semana de incorporación.
+12. Identificar laboratorios con “capacidad ociosa” estimada: capacidad – número de investigadores que los usan a través de proyectos activos vinculados al laboratorio.
+13. Medir la concentración de financiamiento por institución usando índice de Gini sobre los montos de `fundings` activos.
+14. Evaluar la correlación (Spearman) entre `impact_factor` de publicaciones y `total_citations`, reportando rangos y coeficiente aproximado a partir de rankings.
+15. Detectar publicaciones outlier en citas del último año usando z-score dentro de su revista, listando solo las que superen |z| ≥ 2.
+16. Generar una lista de proyectos “multidisciplinares” (≥ 3 áreas distintas) y su distribución porcentual de áreas (principal vs. secundarias).
+17. Construir una vista que muestre, por año, el número de patentes solicitadas y concedidas, la tasa de conversión (grant/apply) y la variación interanual.
+18. Obtener la ruta jerárquica completa de cada área (desde `parent_area_id` hasta raíz) y contar profundidad y anchura de la jerarquía.
+19. Calcular la tasa de citación anual por investigador: citas totales de sus publicaciones / años desde la primera publicación, comparando con el h-index.
+20. Encontrar instituciones con “brecha de talento”: investigadores con h-index superior al percentil 90 global pero con productividad (pubs/año) por debajo del percentil 50.
+21. Determinar para cada proyecto si su presupuesto está por encima de **todas** las alternativas dentro del mismo departamento con el mismo `project_type`.
+22. Para cada llamada de financiamiento, listar los 3 proyectos con mejor “eficiencia de citas” (citas totales de publicaciones asociadas / presupuesto del proyecto).
+23. Construir un ranking de investigadores por “influencia cruzada” (citas recibidas de publicaciones de otras áreas distintas a sus áreas principales).
+24. Identificar eventos académicos que concentran publicaciones de más de 4 instituciones distintas y calcular la entropía de diversidad institucional.
+25. Hallar proyectos con “riesgo de solapamiento”: mismo PI y periodos que se traslapan ≥ 90 días, incluyendo detalle del intervalo común.
+26. Medir el “time-to-publication” promedio desde `start_date` del proyecto hasta la primera publicación asociada; comparar por tipo de proyecto.
+27. Encontrar equipos cuya mediana de h-index de sus integrantes supere a la mediana del departamento; devolver la brecha relativa.
+28. Detectar patentes sin inventores secundarios y verificar si el PI del proyecto aparece como inventor principal; devolver inconsistencias.
+29. Construir cohortes por año de incorporación del investigador y calcular la retención activa por año (sigue con `status = active` y participación en proyectos).
+30. Calcular el ROI bibliométrico de cada institución: (citas totales de publicaciones asociadas a sus proyectos) / (presupuesto total de esos proyectos).
+31. Generar un “leaderboard” de revisores por promedio de `score` otorgado y tasa de “accepted”, solo con ≥ 5 procesos completados.
+32. Identificar áreas subrepresentadas: áreas sin proyectos en los últimos 18 meses pero con publicaciones recientes; devolver lista priorizada.
+33. Construir una red de coafiliación a nivel de proyecto (dos instituciones conectan si co-participan en un proyecto) y listar los nodos con mayor grado.
+34. Detectar laboratorios cuyo equipamiento mencione términos de alto costo (p. ej., *Cryogenic*, *Electron microscope*, *Laser*) y priorizarlos por capacidad usada/total.
+35. Encontrar `fundings` donde la moneda no sea ‘USD’, convertir a USD con una tasa fija provista en una tabla ad-hoc y recalcular totales por institución.
+36. Calcular ventanas móviles de 12 meses de desembolsos por proyecto y detectar cambios de tendencia (derivada positiva→negativa).
+37. Identificar investigadores con perfiles “T-shaped”: al menos una área principal y ≥ 2 áreas secundarias a través de proyectos o publicaciones.
+38. Encontrar publicaciones que citan a otras de la misma institución y medir la proporción de autocitas institucionales por revista.
+39. Evaluar consistencia entre `project_type` y `publication.type`: por proyecto, distribución de tipos de publicación y una métrica de alineación (según regla definida).
+40. Generar una tabla de “lag time” entre `approval_date` del funding y `disbursement_start_date`, con cuantiles (P25, P50, P75) por convocante.
+41. Detectar investigadores con cambios de institución (comparando institución en `researchers` vs. afiliaciones en publicaciones si aparece en `affiliation_institution` de reviewers) y listarlos.
+42. Medir la “exposición internacional”: proyectos por país ≠ país de la institución del PI, agregando ratio por institución.
+43. Construir un modelo de asignación ideal: repartir `weekly_hours` máximas (cap 40) entre proyectos activos del mismo PI para minimizar solapamiento; devolver brechas actuales.
+44. Listar los 20 títulos de publicaciones con mayor *TF-IDF* (aproximado usando frecuencia en títulos y rareza por revista) respecto al corpus total.
+45. Comparar el `impact_factor` medio de las publicaciones asociadas a proyectos con laboratorio vs. sin laboratorio; incluir prueba no paramétrica basada en rangos (estadístico).
+46. Detectar proyectos “huérfanos” (sin publicaciones ni patentes) 12 meses después de `start_date`, y calcular probabilidad empírica por departamento.
+47. Generar perfiles JSON por proyecto que incluyan: título, PI, áreas (lista), laboratorios (lista), publicaciones (array con título y DOI) y total de citas; validar el JSON.
+48. Encontrar discrepancias entre *author_order* y contribución: casos donde un investigador con `is_corresponding = 1` no aparece en las primeras 2 posiciones y su contribución no contiene “Supervision” ni “Writing”.
+49. Detectar *keyword drift* en títulos: proyectos de AI con publicaciones cuyo título no contiene patrones de AI (regex) y viceversa; reportar tasa de desalineación.
+50. Estimar la “velocidad de citación” de cada publicación (citas/año desde `publication_date`) y construir un ranking ajustado por campo (normalización por mediana del área).
 
-61. Mostrar convocatorias con presupuesto mayor al promedio ordenadas por fecha de apertura
-62. Listar publicaciones que han sido citadas más de 100 veces ordenadas por citas
-63. Encontrar investigadores que tienen patentes en múltiples países ordenados por cantidad
-64. Mostrar proyectos con duración mayor al promedio ordenados por duración
-65. Listar instituciones que tienen investigadores con índice h mayor a 40 ordenadas por país
-
-66. Calcular el número de publicaciones por año ordenado por año descendente
-67. Encontrar áreas de conocimiento con más de 10 proyectos ordenadas por cantidad
-68. Mostrar investigadores que han sido autores correspondientes en publicaciones ordenados por nombre
-69. Listar proyectos cancelados con justificación ordenados por fecha de cancelación
-70. Encontrar laboratorios que no tienen proyectos asignados ordenados por nombre
-
-71. Mostrar el total de financiamiento recibido por cada investigador principal ordenado por monto
-72. Listar publicaciones que tienen más de 5 autores ordenadas por cantidad de autores
-73. Encontrar instituciones que tienen proyectos en estado 'finished' ordenadas por cantidad
-74. Mostrar investigadores con más de 20 publicaciones ordenados por cantidad descendente
-75. Listar áreas de conocimiento que no tienen publicaciones asociadas ordenadas por nombre
-
-## Ejercicios de Consultas NIVEL B
-
-1. Mostrar el nombre de cada investigador junto con el nombre de su institución
-2. Listar todos los proyectos con el nombre de su investigador principal
-3. Mostrar las publicaciones con el nombre del journal y el tipo de publicación
-4. Listar los departamentos con el nombre de su institución y país
-5. Mostrar los investigadores con el nombre de su departamento principal
-6. Listar los proyectos con el nombre de su equipo de investigación
-7. Mostrar las patentes con el título del proyecto que las generó
-8. Listar los eventos académicos con el nombre de sus publicaciones asociadas
-9. Mostrar los financiamientos con el nombre del proyecto y la institución que los otorga
-10. Listar los laboratorios con el nombre de su departamento y responsable
-
-11. Mostrar los investigadores con el nombre de su equipo de investigación
-12. Listar las publicaciones con el nombre de todos sus autores
-13. Mostrar los proyectos con el área de conocimiento principal
-14. Listar los investigadores con sus áreas de expertise
-15. Mostrar las convocatorias con los proyectos que han financiado
-16. Listar los departamentos con el número de investigadores que tienen
-17. Mostrar las instituciones con el total de proyectos que tienen
-18. Listar los investigadores con la cantidad de publicaciones que tienen
-19. Mostrar los proyectos con el total de financiamiento recibido
-20. Listar las publicaciones con el número de citas que han recibido
-
-21. Mostrar los investigadores con el nombre de su laboratorio asignado
-22. Listar los proyectos con el nombre de su convocatoria de financiamiento
-23. Mostrar las publicaciones con el evento académico donde se presentaron
-24. Listar los investigadores con el nombre de todos los departamentos a los que pertenecen
-25. Mostrar los proyectos con los nombres de todos los investigadores participantes
-26. Listar las áreas de conocimiento con el número de proyectos asociados
-27. Mostrar las instituciones con el promedio de índice h de sus investigadores
-28. Listar los investigadores con el nombre de su supervisor o jefe de departamento
-29. Mostrar los proyectos con el estado actual y fecha de finalización estimada
-30. Listar las publicaciones con el factor de impacto de su journal
-
-31. Mostrar los investigadores con el total de citas de sus publicaciones
-32. Listar los proyectos con el número de patentes generadas
-33. Mostrar las instituciones con el número de departamentos que tienen
-34. Listar los departamentos con el número de laboratorios que contienen
-35. Mostrar los investigadores con el número de proyectos en los que participan
-
-36. Listar las publicaciones con los nombres de los proyectos que las generaron
-37. Mostrar los proyectos con el nombre del laboratorio donde se desarrollan
-38. Listar los investigadores con el nombre de su institución y país
-39. Mostrar las patentes con los nombres de todos sus inventores
-40. Listar los eventos académicos con el número de publicaciones presentadas
-
-41. Mostrar los financiamientos con el nombre de la convocatoria y proyecto
-42. Listar los laboratorios con el nombre de su departamento e institución
-43. Mostrar los investigadores con el nombre de su área de conocimiento principal
-44. Listar los proyectos con el nombre de todos los departamentos involucrados
-45. Mostrar las publicaciones con los nombres de todos los proyectos relacionados
-
-46. Listar las instituciones con el número total de publicaciones de sus investigadores
-47. Mostrar los departamentos con el número de proyectos activos
-48. Listar los investigadores con el número de patentes como inventor principal
-49. Mostrar los proyectos con el nombre de todos los financiamientos recibidos
-50. Listar las publicaciones con los nombres de todos los autores y sus instituciones
-
-51. Mostrar las convocatorias con el monto total otorgado en financiamientos
-52. Listar los laboratorios con el número de proyectos en desarrollo
-53. Mostrar los investigadores con el nombre de todos los equipos a los que pertenecen
-54. Listar los proyectos con los nombres de todas las áreas de conocimiento relacionadas
-55. Mostrar las publicaciones con el cuartil y factor de impacto de su journal
-
-56. Listar las instituciones con el número de investigadores activos por país
-57. Mostrar los departamentos con el número de publicaciones de sus investigadores
-58. Listar los investigadores con el nombre de su categoría académica e institución
-59. Mostrar los proyectos con el nombre de su estado y fecha de inicio
-60. Listar las publicaciones con los nombres de los autores correspondientes
-
-61. Mostrar las patentes con los nombres de los inventores y su institución
-62. Listar los eventos académicos con el país y ciudad donde se realizan
-63. Mostrar los financiamientos con el nombre de la institución que los provee
-64. Listar los laboratorios con la capacidad y equipamiento principal
-65. Mostrar los investigadores con el número de citas totales y promedio por publicación
-
-66. Listar los proyectos con el nombre del investigador principal y su institución
-67. Mostrar las publicaciones con los nombres de los proyectos y investigadores
-68. Listar las áreas de conocimiento con el número de investigadores especializados
-69. Mostrar las instituciones con el número de patentes registradas por sus investigadores
-70. Listar los departamentos con el nombre de su institución y número de laboratorios
-
-71. Mostrar los investigadores con el nombre de su departamento y número de proyectos
-72. Listar los proyectos con el nombre de su convocatoria y monto total recibido
-73. Mostrar las publicaciones con los nombres de los autores y sus índices h
-74. Listar las patentes con los nombres de los inventores y proyectos asociados
-75. Mostrar las instituciones con el número total de proyectos por tipo
-
-
-## Ejercicios de Consultas NIVEL C
-
-1. Investigadores que NO pertenecen a instituciones de USA pero tienen más de 10 publicaciones
-2. Proyectos que están en estado 'execution' Y tienen presupuesto mayor al promedio de su institución
-3. Publicaciones que tienen factor de impacto mayor a 15 O están en cuartil Q1, pero NO son de tipo 'conference'
-4. Instituciones que tienen departamentos de Computer Science Y Biology, pero NO de Medicine
-5. Investigadores que pertenecen a múltiples departamentos Y tienen índice h > 25
-6. Proyectos que NO han generado publicaciones PERO tienen patentes registradas
-7. Publicaciones que fueron presentadas en eventos académicos Y tienen más de 50 citas
-8. Investigadores que están en estado 'active' pero NO tienen publicaciones en los últimos 2 años
-9. Instituciones que tienen proyectos en todas las áreas de conocimiento disponibles
-10. Departamentos que NO tienen laboratorios PERO tienen investigadores con índice h > 30
-
-11. Proyectos que tienen financiamiento de múltiples instituciones Y presupuesto total > $2M
-12. Investigadores que son autores correspondientes en publicaciones con factor de impacto > 10
-13. Publicaciones que NO tienen citas PERO están en journals con factor de impacto > 5
-14. Instituciones que tienen más de 5 proyectos en estado 'finished' Y al menos 3 en 'execution'
-15. Departamentos que tienen laboratorios con capacidad > 50 Y equipamiento especializado
-
-16. Investigadores que han trabajado en proyectos de múltiples áreas de conocimiento DIFERENTES
-17. Proyectos que han durado más del doble del tiempo estimado PERO están completados
-18. Publicaciones que tienen autores de múltiples instituciones DIFERENTES
-19. Instituciones que NO tienen departamentos de investigación PERO financian proyectos externos
-20. Investigadores que son inventores en patentes PERO NO autores en publicaciones
-
-21. Proyectos que tienen colaboraciones internacionales (investigadores de diferentes países)
-22. Publicaciones que están en el top 10% de citas para su área de conocimiento
-23. Departamentos que tienen todos sus investigadores con índice h > 20
-24. Instituciones que tienen proyectos en todas las categorías de financiamiento disponibles
-25. Investigadores que han sido revisores Y autores en la misma área de conocimiento
-
-26. Proyectos que han generado tanto publicaciones como patentes con impacto comercial
-27. Publicaciones que tienen autores junior (incorporación < 3 años) Y senior (índice h > 30)
-28. Instituciones que tienen una distribución balanceada de proyectos por área de conocimiento
-29. Departamentos que NO tienen proyectos cancelados PERO tienen múltiples completados
-30. Investigadores que han publicado en journals de alto impacto Y conferencias internacionales
-
-31. Proyectos que han recibido financiamiento tanto interno como externo
-32. Publicaciones que son citadas por trabajos de otras áreas de conocimiento
-33. Instituciones que tienen colaboraciones con al menos 3 países diferentes
-34. Departamentos que tienen una productividad científica por investigador > promedio institucional
-35. Investigadores que han mentoreado a junior researchers (co-autoría en publicaciones)
-
-36. Proyectos que han evolucionado de 'planning' a 'execution' a 'finished' sin cancelaciones
-37. Publicaciones que son resultado de colaboraciones interdisciplinarias (múltiples áreas)
-38. Instituciones que tienen una tasa de éxito en convocatorias > 80%
-39. Departamentos que tienen una diversidad de género en su plantilla investigadora
-40. Investigadores que han mantenido productividad constante por más de 5 años
-
-41. Proyectos que han generado spin-offs comerciales (patentes con licencia activa)
-42. Publicaciones que han sido premiadas o reconocidas internacionalmente
-43. Instituciones que tienen programas de investigación en áreas emergentes
-44. Departamentos que colaboran con industria Y academia simultáneamente
-45. Investigadores que han transitado entre academia e industria durante su carrera
-
-46. Proyectos que han adaptado su metodología debido a hallazgos inesperados
-47. Publicaciones que han establecido nuevos paradigmas en su área (alto impacto)
-48. Instituciones que tienen una estrategia de investigación balanceada entre básica y aplicada
-49. Departamentos que han incrementado su productividad científica año tras año
-50. Investigadores que han creado nuevas líneas de investigación en su institución
-
-51. Proyectos que han sobrevivido a cambios de tendencia en su área de conocimiento
-52. Publicaciones que son referencia obligada en su campo (citas excepcionales)
-53. Instituciones que han mantenido excelencia investigadora por más de una década
-54. Departamentos que han formado a investigadores que luego lideraron otras instituciones
-55. Investigadores que han contribuido a múltiples disciplinas diferentes
-
-56. Proyectos que han logrado impacto tanto científico como social demostrable
-57. Publicaciones que han generado debate científico significativo en su campo
-58. Instituciones que han atraído talento investigador internacional consistentemente
-59. Departamentos que han desarrollado metodologías innovadoras adoptadas por otros
-60. Investigadores que han mantenido colaboraciones internacionales a largo plazo
-
-61. Proyectos que han pivotado exitosamente ante obstáculos metodológicos
-62. Publicaciones que han sido traducidas a múltiples idiomas por su relevancia
-63. Instituciones que han creado ecosistemas de innovación alrededor de su investigación
-64. Departamentos que han logrado sostenibilidad financiera diversificando fuentes
-65. Investigadores que han balanceado investigación, docencia y transferencia exitosamente
-
-66. Proyectos que han generado protocolos o estándares adoptados internacionalmente
-67. Publicaciones que han inspirado nuevas líneas de investigación en múltiples grupos
-68. Instituciones que han facilitado movilidad investigadora bidireccional con industria
-69. Departamentos que han mantenido cohesión temática mientras se expanden
-70. Investigadores que han demostrado liderazgo científico en consorcios internacionales
-
-71. Proyectos que han integrado métodos cuantitativos y cualitativos innovadoramente
-72. Publicaciones que han resistido la prueba del tiempo (citas consistentes por años)
-73. Instituciones que han democratizado el acceso a su producción científica
-74. Departamentos que han cultivado una cultura de investigación ética y abierta
-75. Investigadores que han trascendido su disciplina original impactando otras áreas
