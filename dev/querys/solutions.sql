@@ -1,6 +1,7 @@
 --1
-SELECT * FROM researchers WHERE status = 'active';
---alterar datos
-UPDATE researchers SET status = 'inactive' WHERE id = '';
+SELECT name, country FROM institutions ORDER BY country ASC;
 
-2-
+--3
+
+SELECT full_name, h_index FROM researchers 
+WHERE h_index >= 20 AND h_index <= 40;
